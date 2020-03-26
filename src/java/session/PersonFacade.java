@@ -12,12 +12,12 @@ import javax.persistence.PersistenceContext;
 
 /**
  *
- * @author Aillak
+ * @author Irina
  */
 @Stateless
 public class PersonFacade extends AbstractFacade<Person> {
 
-    @PersistenceContext(unitName = "SPTV17JSWebLibrary2PU")
+    @PersistenceContext(unitName = "SPTV17JSWebLibrary.PU")
     private EntityManager em;
 
     @Override

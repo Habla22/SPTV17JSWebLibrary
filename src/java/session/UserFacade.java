@@ -12,12 +12,12 @@ import javax.persistence.PersistenceContext;
 
 /**
  *
- * @author Aillak
+ * @author Irina
  */
 @Stateless
 public class UserFacade extends AbstractFacade<User> {
 
-    @PersistenceContext(unitName = "SPTV17JSWebLibrary2PU")
+    @PersistenceContext(unitName = "SPTV17JSWebLibrary")
     private EntityManager em;
 
     @Override
@@ -27,6 +27,16 @@ public class UserFacade extends AbstractFacade<User> {
 
     public UserFacade() {
         super(User.class);
+    }
+
+    public User findByLogin(String login) {
+        try {
+            return (User) em.createQuery("SELECT u FROM User u WHERE u.login = :login")
+                    .setParameter("login", login)
+                    .getSingleResult();
+        } catch (Exception e) {
+            return null;
+        }
     }
     
 }

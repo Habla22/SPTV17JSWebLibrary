@@ -10,5 +10,5 @@
         <property name="URL" value="jdbc:mysql://localhost:3306/sptv17jsweblibrary?zeroDateTimeBehavior=convertToNull&amp;useUnicode=true&amp;characterEncoding=utf8"/>
         <property name="driverClass" value="com.mysql.jdbc.Driver"/>
     </jdbc-connection-pool>
-    <jdbc-resource enabled="true" jndi-name="java:app/jdbc/sprtv17jsweblibrary" object-type="user" pool-name="mysql_sptv17jsweblibrary_sptv17jsweblibraryPool"/>
+    <jdbc-resource enabled="true" jndi-name="java:app/jdbc/sptv17jsweblibraryDS" object-type="user" pool-name="mysql_sptv17jsweblibrary_sptv17jsweblibraryPool"/>
 </resources>
