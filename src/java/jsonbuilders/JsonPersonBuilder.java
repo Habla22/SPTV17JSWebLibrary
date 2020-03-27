@@ -10,10 +10,7 @@ import javax.json.Json;
 import javax.json.JsonObjectBuilder;
 import javax.json.JsonValue;
 
-/**
- *
- * @author Irina
- */
+
 public class JsonPersonBuilder {
 
     JsonValue createJsonPersonObject(Person person) {

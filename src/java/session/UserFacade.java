@@ -17,7 +17,7 @@ import javax.persistence.PersistenceContext;
 @Stateless
 public class UserFacade extends AbstractFacade<User> {
 
-    @PersistenceContext(unitName = "SPTV17JSWebLibrary")
+    @PersistenceContext(unitName = "SPTV17JSWebLibraryPU")
     private EntityManager em;
 
     @Override

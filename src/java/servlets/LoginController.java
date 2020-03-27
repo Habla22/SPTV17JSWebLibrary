@@ -27,10 +27,6 @@ import session.PersonFacade;
 import session.UserFacade;
 import util.EncryptPass;
 
-/**
- *
- * @author Irina
- */
 @WebServlet(name = "LoginController", urlPatterns = {
     "/createUser", 
     "/login", 
