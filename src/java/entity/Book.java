@@ -16,7 +16,7 @@ import javax.persistence.Temporal;
 
 /**
  *
- * @author artjo
+ * @author AleksandrM
  */
 @Entity
 public class Book implements Serializable {
