@@ -23,6 +23,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import jsonbuilders.JsonUserBuilder;
+import session.BookFacade;
 import session.PersonFacade;
 import session.UserFacade;
 import util.EncryptPass;
@@ -40,6 +41,7 @@ import util.EncryptPass;
 public class LoginController extends HttpServlet {
 @EJB private PersonFacade personFacade;
 @EJB private UserFacade userFacade;
+@EJB private BookFacade bookFacade;
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -52,6 +54,7 @@ public class LoginController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("UTF-8");
         String json = "";
         JsonObjectBuilder job = Json.createObjectBuilder();
         EncryptPass ep = new EncryptPass();

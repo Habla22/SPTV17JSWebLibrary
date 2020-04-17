@@ -1,5 +1,5 @@
-
 import {authModule} from './AuthModule.js';
+import {bookModule} from './BookModule.js';
 
 document.getElementById('enter-menu').onclick=function(){
     toogleMenuActive('enter-menu');
@@ -8,6 +8,10 @@ document.getElementById('enter-menu').onclick=function(){
 document.getElementById('sysout').onclick=function(){
     toogleMenuActive('sysout');
     authModule.logout();
+}
+document.getElementById('printNewBookForm').onclick=function(){
+    toogleMenuActive('printNewBookForm');
+    bookModule.printNewBookForm();
 }
 
 function toogleMenuActive(elementId){

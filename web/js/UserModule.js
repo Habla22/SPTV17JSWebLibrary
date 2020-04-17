@@ -53,11 +53,11 @@ class UserModule{
           httpModule.http('createUser', 'POST', user)
                   .then(function(response){// response содержит ответ от сервера
                       if(response === null || response === undefined){
-                          document.getElementById('info').innerHTML = 'Пользователя добавить неудалось';
+                          document.getElementById('info').innerHTML = 'Пользователя добавить не удалось';
                           userModule.printRegistrationForm(); 
                       }
                       if(response.actionStatus === 'false'){
-                          document.getElementById('info').innerHTML = 'Пользователя добавить неудалось';
+                          document.getElementById('info').innerHTML = 'Пользователя добавить не удалось';
                           userModule.printRegistrationForm(); 
                       }
                       // запрос успешен
